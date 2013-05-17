@@ -1,3 +1,10 @@
+//test servicio
+http://busgps.hostoi.com/add_position.php?bus=123&longitude=mundo&latitude=hola
+
+//ver resultado
+http://busgps.hostoi.com/positios.php
+
+
 ///Establece la posicion
 telnet localhost 5554
 geo fix -82.411629 20.054553
@@ -13,4 +20,4 @@ geo fix -32.411629 21.054553
 {
 		StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
-		}
+}
