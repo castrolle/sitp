@@ -17,6 +17,29 @@
         <!--  Entry for RegisterActivity.class -->
         <activity android:name=".RegisterActivity"
         		  android:label="Register New Account"></activity>
+        
+        
+        
+        <!-- News Feed Activity -->
+        <activity android:name="com.androidhive.dashboard.AndroidDashboardDesignActivity" ></activity>
+        
+          <!-- News Feed Activity -->
+        <activity android:name="com.androidhive.dashboard.NewsFeedActivity" ></activity>
+
+        <!-- Friends Activity -->
+        <activity android:name="com.androidhive.dashboard.FriendsActivity" ></activity>
+
+        <!-- Messages Activity -->
+        <activity android:name="com.androidhive.dashboard.MessagesActivity" ></activity>
+
+        <!-- Places Activity -->
+        <activity android:name="com.androidhive.dashboard.PlacesActivity" ></activity>
+
+        <!-- Events Activity -->
+        <activity android:name="com.androidhive.dashboard.EventsActivity" ></activity>
+        
+        <!-- Photos Activity -->
+        <activity android:name="com.androidhive.dashboard.PhotosActivity" ></activity>
 
     </application>
 </manifest>
