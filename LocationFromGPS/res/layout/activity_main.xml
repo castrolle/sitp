@@ -4,18 +4,10 @@
     android:layout_height="match_parent" >
     
     <TextView
-        android:id="@+id/tv_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/str_tv_location"
-        android:textStyle="bold" />
-    
-    <TextView
         android:id="@+id/tv_longitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_location"
+        android:layout_below="@id/tv_longitude"
         android:layout_centerHorizontal="true" />
     
     <TextView
@@ -23,6 +15,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_longitude"
-        android:layout_centerHorizontal="true"/>    
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/str_tv_location"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_location"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:ems="10"
+        android:text="@string/bus" />
 
 </RelativeLayout>

@@ -1,0 +1,16 @@
+///Establece la posicion
+telnet localhost 5554
+geo fix -82.411629 20.054553
+geo fix 82.411629 25.054553
+geo fix -22.411629 22.054553
+geo fix -32.411629 21.054553
+
+
+
+
+
+//Agregar bloque estatico
+{
+		StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
+		StrictMode.setThreadPolicy(policy);
+		}
