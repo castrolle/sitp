@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.androidhive.dashboard.AndroidDashboardDesignActivity;
 import com.androidhive.dashboard.session.SessionManager;
+import com.androidhive.sessions.LoginActivity;
+import com.androidhive.sessions.MainActivity;
 
 public class LoginActivity extends Activity {
 
@@ -34,12 +36,6 @@ public class LoginActivity extends Activity {
         
         Toast.makeText(getApplicationContext(), "User Login Status: " + session.isLoggedIn(), Toast.LENGTH_LONG).show();
         
-        if(session.isLoggedIn()){
-        	// Launching News Feed Screen
-			Intent i = new Intent(getApplicationContext(),
-					AndroidDashboardDesignActivity.class);
-			startActivity(i);
-        }
 
 		TextView registerScreen = (TextView) findViewById(R.id.link_to_register);
 
@@ -48,6 +44,7 @@ public class LoginActivity extends Activity {
 		btnLogin.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
+				
 				
 				// Get username, password from EditText
 				String username = txtUsername.getText().toString();

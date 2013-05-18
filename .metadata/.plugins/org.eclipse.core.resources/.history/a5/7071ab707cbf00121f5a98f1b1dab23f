@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.androidhive.dashboard.AndroidDashboardDesignActivity;
 import com.androidhive.dashboard.session.SessionManager;
+import com.androidhive.sessions.R;
 
 public class LoginActivity extends Activity {
 
@@ -34,12 +35,6 @@ public class LoginActivity extends Activity {
         
         Toast.makeText(getApplicationContext(), "User Login Status: " + session.isLoggedIn(), Toast.LENGTH_LONG).show();
         
-        if(session.isLoggedIn()){
-        	// Launching News Feed Screen
-			Intent i = new Intent(getApplicationContext(),
-					AndroidDashboardDesignActivity.class);
-			startActivity(i);
-        }
 
 		TextView registerScreen = (TextView) findViewById(R.id.link_to_register);
 
@@ -48,39 +43,10 @@ public class LoginActivity extends Activity {
 		btnLogin.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				
-				// Get username, password from EditText
-				String username = txtUsername.getText().toString();
-				String password = txtPassword.getText().toString();
-				
-				// Check if username, password is filled				
-				if(username.trim().length() > 0 && password.trim().length() > 0){
-					// For testing puspose username, password is checked with sample data
-					// username = test
-					// password = test
-					if(username.equals("test") && password.equals("test")){
-						
-						// Creating user login session
-						// For testing i am stroing name, email as follow
-						// Use user real data
-						session.createLoginSession("Android Hive", "anroidhive@gmail.com");
-						
-						// Launching News Feed Screen
-						Intent i = new Intent(getApplicationContext(),
-								AndroidDashboardDesignActivity.class);
-						startActivity(i);
-						//finish();
-						
-					}else{
-						// username / password doesn't match
-					    Toast.makeText(getApplicationContext(), "Login failed..  Username/Password is incorrect", Toast.LENGTH_LONG).show();
-					        
-					}				
-				}else{
-					// user didn't entered username or password
-					// Show alert asking him to enter the details
-					Toast.makeText(getApplicationContext(), "Login failed..  Please enter username and password", Toast.LENGTH_LONG).show();
-				}
+				// Launching News Feed Screen
+				Intent i = new Intent(getApplicationContext(),
+						AndroidDashboardDesignActivity.class);
+				startActivity(i);
 			}
 		});
 

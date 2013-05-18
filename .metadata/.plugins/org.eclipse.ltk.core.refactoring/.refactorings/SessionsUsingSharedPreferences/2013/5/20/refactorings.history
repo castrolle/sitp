@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;SessionManager.java&apos; to &apos;AndroidLoginAndRegistration/src/com.androidhive.dashboard.session&apos;&#x0D;&#x0A;- Original project: &apos;SessionsUsingSharedPreferences&apos;&#x0D;&#x0A;- Destination element: &apos;AndroidLoginAndRegistration/src/com.androidhive.dashboard.session&apos;&#x0D;&#x0A;- Original element: &apos;com.androidhive.sessions.SessionManager.java&apos;" description="Copy compilation unit" destination="=AndroidLoginAndRegistration/src&lt;com.androidhive.dashboard.session" element1="/src&lt;com.androidhive.sessions{SessionManager.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1368854952122" units="1" version="1.0"/>
+</session>
