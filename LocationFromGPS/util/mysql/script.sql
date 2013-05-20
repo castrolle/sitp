@@ -1,36 +1,53 @@
--- phpMyAdmin SQL Dump
--- version 2.11.4
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: May 17, 2013 at 03:31 PM
--- Server version: 5.1.57
--- PHP Version: 5.2.17
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
---
--- Database: `a7024518_bus`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `position`
---
-
-CREATE TABLE `position` (
+CREATE TABLE IF NOT EXISTS `bus` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `bus_id` int(11) NOT NULL,
+  `id_route` int(11) NOT NULL,
+  `plate` varchar(100) NOT NULL,
+  `number` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+
+INSERT INTO `bus` (`id`, `id_route`, `plate`, `number`) VALUES
+('1', '1', 'FGH-456', '123');
+
+
+
+CREATE TABLE IF NOT EXISTS `bus_driver` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_bus` int(11) NOT NULL,
+  `id_driver` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_bus` (`id_bus`),
+  UNIQUE KEY `id_driver` (`id_driver`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+INSERT INTO `bus_driver` (`id`, `id_bus`, `id_driver`) VALUES
+(1, 1, 1);
+
+
+CREATE TABLE IF NOT EXISTS `driver` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `family_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+
+INSERT INTO `driver` (`id`, `name`, `family_name`) VALUES
+(1, 'Miguel', 'Ortiz');
+
+
+
+CREATE TABLE IF NOT EXISTS `position` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_bus` int(11) NOT NULL,
   `latitude` varchar(50) NOT NULL,
   `longitude` varchar(50) NOT NULL,
   `date` date NOT NULL,
   `hour` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=80 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=81 ;
 
---
--- Dumping data for table `position`
---
+INSERT INTO `a7024518_bus`.`position` (`id`, `id_bus`, `latitude`, `longitude`, `date`, `hour`) VALUES ('1', '1', '211', '2121', '2013-05-10', '13:50');
 
-INSERT INTO `position` VALUES(79, 123, '12.132132', '85.12121', '2013-05-17', '14:28:34');
