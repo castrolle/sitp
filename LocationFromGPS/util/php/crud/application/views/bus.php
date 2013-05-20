@@ -33,9 +33,9 @@ a:hover
 <body>
 <!-- Beginning header -->
 	<div>
-		<a href='<?php echo site_url('example/bus')?>'>Bus</a> |
-		<a href='<?php echo site_url('example/driver')?>'>Driver</a> |		
-		<a href='<?php echo site_url('example/bus_driver')?>'>Bus-Driver</a>		
+		<a href='<?php echo site_url('fill/bus')?>'>Bus</a> |
+		<a href='<?php echo site_url('fill/driver')?>'>Driver</a> |		
+		<a href='<?php echo site_url('fill/bus_driver')?>'>Bus-Driver</a>		
 	</div>
 <!-- End of header-->
 	<div style='height:20px;'></div>

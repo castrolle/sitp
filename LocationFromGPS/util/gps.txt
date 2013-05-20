@@ -13,7 +13,8 @@ geo fix -22.411629 22.054553
 geo fix -32.411629 21.054553
 
 
-
+///CRUD de entidades
+http://busgps.hostoi.com/crud/index.php/fill/bus
 
 
 //Agregar bloque estatico
