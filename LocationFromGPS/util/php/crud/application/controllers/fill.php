@@ -50,13 +50,17 @@ class Fill extends CI_Controller {
         $this->_example_output($output);                
     }
 	
-	function bus_driver()
+    function bus_driver()
     {
         $output = $this->grocery_crud->render();
         $this->_example_output($output);
     }
-	
-	   
+ 
+    function parameter()
+    {
+        $output = $this->grocery_crud->render();
+        $this->_example_output($output);
+    }
 
 	
 }

@@ -24,6 +24,7 @@ switch ($method) {
 				$id_bus = $obj->id;
 		}	 	
 	
+echo $id_bus;
 		if($id_bus != 0){
 	        $sql = "INSERT INTO position (id_bus,longitude,latitude,date,hour) VALUES ('$id_bus','$_GET[longitude]','$_GET[latitude]',STR_TO_DATE('$date_string','%d-%m-%Y'),'$hour_string')";
 			mysql_query($sql);
