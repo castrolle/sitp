@@ -22,3 +22,8 @@ http://busgps.hostoi.com/crud/index.php/fill/bus
 		StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 }
+
+
+
+SELECT TIMESTAMPDIFF(HOUR, stamp,TIMESTAMP('2013-05-10 17:15:02')) FROM `position` WHERE 1
+SELECT TIMESTAMPDIFF(MINUTE, stamp,TIMESTAMP('2013-05-10 17:15:02')) FROM `position` WHERE 1
