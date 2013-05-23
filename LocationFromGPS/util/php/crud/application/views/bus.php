@@ -33,10 +33,7 @@ a:hover
 <body>
 <!-- Beginning header -->
 	<div>
-		<a href='<?php echo site_url('fill/bus')?>'>Bus</a> |
-		<a href='<?php echo site_url('fill/driver')?>'>Driver</a> |		
-		<a href='<?php echo site_url('fill/bus_driver')?>'>Bus-Driver</a> |
-		<a href='<?php echo site_url('fill/parameter')?>'>Parameter</a>		
+			
 
 	</div>
 <!-- End of header-->

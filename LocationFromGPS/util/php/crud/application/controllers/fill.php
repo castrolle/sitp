@@ -55,6 +55,13 @@ class Fill extends CI_Controller {
         $output = $this->grocery_crud->render();
         $this->_example_output($output);
     }
+
+   function check_point()
+    {
+        $output = $this->grocery_crud->render();
+        $this->_example_output($output);
+    }
+
  
     function parameter()
     {

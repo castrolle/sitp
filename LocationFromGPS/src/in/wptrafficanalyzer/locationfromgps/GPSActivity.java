@@ -10,6 +10,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -17,7 +18,6 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.Menu;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +29,7 @@ public class GPSActivity extends Activity implements LocationListener{
 	HttpClient httpClient ;
 	HttpGet del;
 	private String busId;
+	private String url;
 	
 	{
 		StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -43,6 +44,10 @@ public class GPSActivity extends Activity implements LocationListener{
        	httpClient= new DefaultHttpClient();
         
         setContentView(R.layout.activity_gps);
+        
+        Intent intent = getIntent();
+        busId = intent.getExtras().getString("busId");
+        url = intent.getExtras().getString("url");
         
         // Getting LocationManager object
         locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);        
@@ -84,9 +89,6 @@ public class GPSActivity extends Activity implements LocationListener{
 		// Getting reference to TextView tv_longitude
 		TextView tvLongitude = (TextView)findViewById(R.id.tv_longitude);
 		
-		EditText txtIdBus = (EditText)findViewById(R.id.txtBus);
-    	busId = txtIdBus.getText().toString();
-		
 		// Getting reference to TextView tv_latitude
 		TextView tvLatitude = (TextView)findViewById(R.id.tv_latitude);
 		
@@ -102,7 +104,7 @@ public class GPSActivity extends Activity implements LocationListener{
 				busId = "0";
 			}
 			
-			del = new HttpGet("http://busgps.hostoi.com/add_position.php?bus="+busId+"&longitude="+location.getLongitude()+"&latitude="+location.getLatitude());
+			del = new HttpGet(url+"/services/position/add_position.php?bus="+busId+"&longitude="+location.getLongitude()+"&latitude="+location.getLatitude());
 			del.setHeader("content-type", "application/json");
 			httpClient.execute(del);
 		} catch (ClientProtocolException e) {

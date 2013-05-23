@@ -3,39 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
-    <TextView
-        android:id="@+id/tv_longitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_longitude"
-        android:layout_centerHorizontal="true" />
-    
-    <TextView
-        android:id="@+id/tv_latitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_longitude"
-        android:layout_centerHorizontal="true"/>
 
+    <EditText
+        android:id="@+id/txtServer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:text="@string/txtServer" />
+
+  
     <EditText
         android:id="@+id/txtBus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_latitude"
+        android:layout_below="@+id/txtServer"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
-        android:text="@string/bus" >
-
-        <requestFocus />
-    </EditText>
-
-    <Button
+        android:text="@string/bus" />
+    
+      <Button
         android:id="@+id/ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtBus"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
         android:text="@string/ok" />
+    
 
 </RelativeLayout>
