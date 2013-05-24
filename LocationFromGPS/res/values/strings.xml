@@ -6,5 +6,5 @@
     <string name="str_tv_location">Current Location</string>
     <string name="bus">123</string>
     <string name="ok">Aceptar</string>
-    <string name="txtServer">http://sitp.my.phpcloud.com/sitp/</string>
+    <string name="txtServer">http://sitpe.my.phpcloud.com/</string>
 </resources>
